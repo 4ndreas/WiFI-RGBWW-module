@@ -1,0 +1,13 @@
+sitemap default label="Wifi controller"{
+   Frame label="WiFi RGB 1" {
+      Colorpicker item=fWIFI_RGB_1 icon="slider"
+      Switch item=WIFI_RGB_1_Switch1
+      Switch item=WIFI_RGB_1_Switch2
+   }
+   
+   Frame label="WiFi RGB 2" {
+      Colorpicker item=fWIFI_RGB_2 icon="slider"
+      Switch item=WIFI_RGB_2_Switch1
+      Switch item=WIFI_RGB_2_Switch2
+   }
+ }

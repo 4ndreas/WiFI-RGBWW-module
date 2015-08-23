@@ -1,0 +1,41 @@
+import org.openhab.core.library.types.*
+ 
+var HSBType hsbValue
+var int redValue
+var int greenValue
+var int blueValue
+var String RGBvalues
+ 
+rule "Set RGB 1 value"
+   when
+   Item fWIFI_RGB_1 changed
+   then
+   hsbValue = fWIFI_RGB_1.state as HSBType 
+ 
+   redValue = hsbValue.red.intValue
+   greenValue = hsbValue.green.intValue
+   blueValue = hsbValue.blue.intValue
+ 
+
+   RGBvalues= redValue.toString + ";" + greenValue.toString + ";" + blueValue.toString
+   sendCommand( WIFI_RGB_1_RGB, RGBvalues )
+   
+   logInfo( "fWIFI_RGB_1", RGBvalues )
+ end
+ 
+ rule "Set RGB 2 value"
+   when
+   Item fWIFI_RGB_2 changed
+   then
+   hsbValue = fWIFI_RGB_2.state as HSBType 
+ 
+   redValue = hsbValue.red.intValue
+   greenValue = hsbValue.green.intValue
+   blueValue = hsbValue.blue.intValue
+ 
+
+   RGBvalues= redValue.toString + ";" + greenValue.toString + ";" + blueValue.toString
+   sendCommand( WIFI_RGB_2_RGB, RGBvalues )
+   
+   logInfo( "fWIFI_RGB_2", RGBvalues )
+end

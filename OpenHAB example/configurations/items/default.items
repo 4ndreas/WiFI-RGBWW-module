@@ -1,0 +1,15 @@
+Group  All
+
+// WiFi RGB 1
+Group  WIFI_RGB_1      		"StarLightCore" 	(All)
+Color  fWIFI_RGB_1     		"RGB"    <slider> 	(WIFI_RGB_1) {mqtt=">[localbroker:/openHAB/Nachtlicht:command:ON:1],>[localbroker:/openHAB/Test_Switch1:command:OFF:0]"}
+String WIFI_RGB_1_RGB 							(WIFI_RGB_1) {mqtt=">[localbroker:/openHAB/RGB_1/Color:command:*:default]"}
+Switch WIFI_RGB_1_Switch1 	"15W LED" 			(WIFI_RGB_1) {mqtt=">[localbroker:/openHAB/RGB_1/SW1:command:ON:100],>[localbroker:/openHAB/RGB_1/SW1:command:OFF:0]"}
+Switch WIFI_RGB_1_Switch2 	"Schalter 2" 		(WIFI_RGB_1) {mqtt=">[localbroker:/openHAB/RGB_1/SW2:command:ON:100],>[localbroker:/openHAB/RGB_1/SW2:command:OFF:0]"}
+
+// WiFi RGB 2
+Group  WIFI_RGB_2      		"WiFi RGB 2" 		(All)
+Color  fWIFI_RGB_2     		"RGB"    <slider> 	(WIFI_RGB_2)
+String WIFI_RGB_2_RGB 							(WIFI_RGB_2) {mqtt=">[localbroker:/openHAB/RGB_2/Color:command:*:default]"}
+Switch WIFI_RGB_2_Switch1 	"W1" 				(WIFI_RGB_2) {mqtt=">[localbroker:/openHAB/RGB_2/SW1:command:ON:100],>[localbroker:/openHAB/RGB_2/SW1:command:OFF:0]"}
+Switch WIFI_RGB_2_Switch2 	"W2" 				(WIFI_RGB_2) {mqtt=">[localbroker:/openHAB/RGB_2/SW2:command:ON:100],>[localbroker:/openHAB/RGB_2/SW2:command:OFF:0]"}
