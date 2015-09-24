@@ -1,5 +1,5 @@
 #include <ESP8266WiFi.h>
-#include <PubSubClient.h>
+#include <PubSubClient.h>	// https://github.com/Imroy/pubsubclient
 
 
 // #define PWMRANGE 255
@@ -28,8 +28,8 @@ int gamma_table[PWM_VALUE+1] = {
 
 // RGB FET
 #define redPIN    12
-#define greenPIN  13
-#define bluePIN   15
+#define greenPIN  15
+#define bluePIN   13
 
 
 // W FET
@@ -52,8 +52,11 @@ int gamma_table[PWM_VALUE+1] = {
 #define LED2off digitalWrite(LED2PIN,HIGH)
 #define LED2on digitalWrite(LED2PIN,LOW)
 
-const char *ssid =  "*************";  //  your network SSID (name)
-const char *pass =  "********";       // your network password
+//const char *ssid =  "*************";  //  your network SSID (name)
+//const char *pass =  "********";       // your network password
+
+const char *ssid =  "Luftnetz_2GHz";    // cannot be longer than 32 characters!
+const char *pass =  "achtung!warnschuss!";    //
 
 
 // Update these with values suitable for your network.
