@@ -1,0 +1,6 @@
+{
+  "name": "Wifi-rgbww-module",
+  "tagline": "Chine Wifi rgbww controller module hack",
+  "body": "# WiFI-RGBWW-module\r\nChine Wifi rgbww controller module hack\r\n\r\n\r\nIt's a simple openHAB configuration to control\r\n\r\nThe pinout should be \r\n    \r\n    // RGB FET\r\n    redPIN12\r\n    greenPIN  13\r\n    bluePIN   15\r\n    \r\n    // W FET\r\n    w1PIN 14\r\n    w2PIN 4\r\n    \r\n    \r\n    // onbaord green LED D1\r\n    LEDPIN5\r\n    // onbaord red LED D2\r\n    LED2PIN   1\r\n\r\n\tTX GPIO2 @Serial1 (Serial ONE)\r\n\tRX GPIO3 @Serial  \r\n\r\n\r\nJumper closed -> start in bootloader mode on Power on. \r\nJumper open   -> start user programm ",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
